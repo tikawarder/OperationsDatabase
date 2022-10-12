@@ -1,11 +1,14 @@
 package com.epam.database.entity;
 
+import com.epam.database.domain.Operation;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Data
+@Builder
 @Table(name="store")
 public class ReportMovement {
     @Id
@@ -17,5 +20,5 @@ public class ReportMovement {
     int to;
     int loadPeople;
     int unloadPeople;
-    Enum state;
+    Operation operation;
 }

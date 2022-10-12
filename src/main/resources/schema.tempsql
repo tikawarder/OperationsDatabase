@@ -4,5 +4,5 @@ fromlevel bigint,
 tolevel bigint,
 loadPeople bigint,
 unloadPeople bigint,
-state varchar(8)
+operation VARCHAR(16)
 );
