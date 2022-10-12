@@ -17,7 +17,7 @@ public class OperationsController {
     SaverService service;
 
     @PostMapping("/movements")
-    public ResponseEntity.BodyBuilder postOperations(@RequestBody List<ReportMovement> movements){
+    public ResponseEntity.BodyBuilder postMovements(@RequestBody List<ReportMovement> movements){
         service.saveOperations(movements);
         return ResponseEntity.status(HttpStatus.CREATED);
     }
